@@ -1,4 +1,4 @@
-package version1.common;
+package com.netty.version1.common;
 
 import java.io.Serializable;
 

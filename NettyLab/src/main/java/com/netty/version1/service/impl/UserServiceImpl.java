@@ -1,11 +1,10 @@
-package version1.service.impl;
+package com.netty.version1.service.impl;
 
 import java.math.BigDecimal;
+import com.netty.version1.protocol.UserQueryParam;
+import com.netty.version1.protocol.UserQueryResponse;
+import com.netty.version1.service.UserService;
 import org.springframework.stereotype.Service;
-
-import version1.protocol.UserQueryParam;
-import version1.protocol.UserQueryResponse;
-import version1.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

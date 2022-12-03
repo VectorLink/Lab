@@ -8,13 +8,13 @@ import io.netty.channel.embedded.EmbeddedChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
-import version1.protocol.StringMessage;
+import com.netty.version1.protocol.StringMessage;
 
 public class TestLengthFieldDecoder {
     public static void main(String[] args) {
         EmbeddedChannel channel=new EmbeddedChannel(
                 new LengthFieldBasedFrameDecoder(1024,0,4,0,0),
-                new LoggingHandler(LogLevel.INFO ),
+                new LoggingHandler(LogLevel.DEBUG ),
                 new StringMessage()
         );
 

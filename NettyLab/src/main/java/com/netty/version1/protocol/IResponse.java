@@ -1,7 +1,9 @@
-package version1.protocol;
+package com.netty.version1.protocol;
+
+import com.netty.version1.common.APIId;
 
 import lombok.Data;
-import version1.common.APIId;
+
 @Data
 public abstract class IResponse<T> {
   APIId apiId;

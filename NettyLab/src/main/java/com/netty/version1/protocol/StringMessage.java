@@ -1,4 +1,4 @@
-package version1.protocol;
+package com.netty.version1.protocol;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

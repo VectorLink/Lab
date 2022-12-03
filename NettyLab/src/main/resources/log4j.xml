@@ -2,17 +2,39 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <property name="LOG_PATTERN"
               value="%d{yyyy-MM-dd HH:mm:ss} [%thread][%X{X-B3-URL}][%X{X-B3-ReqId}][%X{X-B3-TraceId}] %-5level %logger -%msg%n"/>
+    <property name="LOG_CHARSET" value="UTF-8" />
+    <property name="log_dir" value="/var/log/lab" />
+    <property name="maxInfoHistory" value="180"/>
+<!--    输出控制，格式控制-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>${LOG_PATTERN}</pattern>
         </encoder>
     </appender>
-    <appender name="info-appender" class="ch.qos.logback.classic.AsyncAppender">
+    <appender name="infoFIlE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log_dir}/lab-info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/lab-%d{yyyy-MM-dd}.info.log.zip</fileNamePattern>
+            <maxHistory>${maxInfoHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>${LOG_CHARSET}</charset>
+        </encoder>
+    </appender>
+    <appender name="info-appender" class="ch.qos.logback.core.">
         <appender-ref ref="infoFIlE"/>
     </appender>
-    <appender name="error-appender" class="ch.qos.logback.classic.AsyncAppender">
+    <appender name="error-appender" class="ch.qos.logback.core.">
         <appender-ref ref="errorFile"/>
     </appender>
+<!--    定义监测目标-->
+    <logger name="io.netty.handler.logging.LoggingHandler" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="com" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
     <root level="INFO">
         <!-- 控制台输出 -->
          <appender-ref ref="STDOUT" />

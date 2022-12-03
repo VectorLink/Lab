@@ -1,4 +1,4 @@
-package version1.protocol;
+package com.netty.version1.protocol;
 
 import java.math.BigDecimal;
 

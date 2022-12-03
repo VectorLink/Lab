@@ -1,7 +1,7 @@
-package version1.protocol;
+package com.netty.version1.protocol;
 
 import lombok.Data;
-import version1.common.APIId;
+import com.netty.version1.common.APIId;
 
 @Data
 public class UserQueryParam extends IResponse<UserQueryResponse>{

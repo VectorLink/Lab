@@ -5,8 +5,8 @@ import java.lang.reflect.Method;
 
 
 import lombok.extern.slf4j.Slf4j;
-import version1.common.APIId;
-import version1.protocol.UserQueryParam;
+import com.netty.version1.common.APIId;
+import com.netty.version1.protocol.UserQueryParam;
 
 @Slf4j
 public class TestService {
