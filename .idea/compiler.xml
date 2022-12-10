@@ -12,10 +12,5 @@
         <module name="DesignPatternLab" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="DesignPatternLab" target="8" />
-      <module name="Lab" target="8" />
-      <module name="NettyLab" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

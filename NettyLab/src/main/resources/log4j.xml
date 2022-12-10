@@ -22,10 +22,21 @@
             <charset>${LOG_CHARSET}</charset>
         </encoder>
     </appender>
-    <appender name="info-appender" class="ch.qos.logback.core.">
+    <appender name="errorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log_dir}/lab-error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/lab-%d{yyyy-MM-dd}.error.log.zip</fileNamePattern>
+            <maxHistory>${maxInfoHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>${LOG_CHARSET}</charset>
+        </encoder>
+    </appender>
+    <appender name="info-appender" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="infoFIlE"/>
     </appender>
-    <appender name="error-appender" class="ch.qos.logback.core.">
+    <appender name="error-appender" class="ch.qos.logback.classic.AsyncAppender">
         <appender-ref ref="errorFile"/>
     </appender>
 <!--    定义监测目标-->
