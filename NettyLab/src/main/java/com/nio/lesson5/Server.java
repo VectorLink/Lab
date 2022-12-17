@@ -1,6 +1,5 @@
-package com.lesson.lesson5;
+package com.nio.lesson5;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.ServerSocketChannel;

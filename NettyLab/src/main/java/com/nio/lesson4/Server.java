@@ -1,4 +1,4 @@
-package com.lesson.lesson4;
+package com.nio.lesson4;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;

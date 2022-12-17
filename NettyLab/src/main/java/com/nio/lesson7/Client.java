@@ -1,4 +1,4 @@
-package com.lesson.lesson7;
+package com.nio.lesson7;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

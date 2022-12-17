@@ -1,4 +1,4 @@
-package com.lesson.lesson1;
+package com.nio.lesson1;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,4 +1,4 @@
-package com.lesson.lesson5;
+package com.nio.lesson5;
 
 import java.net.InetSocketAddress;
 import java.nio.channels.SocketChannel;

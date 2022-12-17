@@ -1,4 +1,4 @@
-package com.lesson.lesson2;
+package com.nio.lesson2;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
